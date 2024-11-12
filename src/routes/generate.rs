@@ -35,7 +35,7 @@ pub struct GenerateResponse {
 }
 
 #[instrument(name = "GENERATE")]
-#[post("/api/generate")]
+#[post("/generate")]
 pub async fn generate(form: web::Json<GenerateRequest>, pool: web::Data<PgPool>) -> impl Responder {
     if !form.is_connected || form.public_key.is_none() {
         return HttpResponse::BadRequest().json(GenerateResponse {

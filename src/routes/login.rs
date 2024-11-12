@@ -30,7 +30,7 @@ pub async fn verify_credentials(
 */
 
 #[instrument(name = "Logging in user")]
-#[post("/api/login")]
+#[post("/login")]
 pub async fn login(info: web::Json<LoginRequest>) -> impl Responder {
     if info.username == "user" && info.password == "password" {
         HttpResponse::Ok().json(LoginResponse {

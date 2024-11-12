@@ -30,6 +30,7 @@ secrecy = { version = "0.10.3", features = ["serde"] }
 tracing-actix-web = "0.7"
 actix-files = "0.6.6"
 base64 = "0.22.1"
+serde-aux = "4.5.0"
 
 [dependencies.sqlx]
 version = "0.7"
