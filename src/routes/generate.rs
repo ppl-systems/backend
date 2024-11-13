@@ -52,8 +52,8 @@ pub async fn generate(form: web::Json<GenerateRequest>, pool: web::Data<PgPool>)
         Ok(Some(token_amount)) => {
             // User exists, proceed with image generation
             // let image_path = generate_image(form.gen_params);
-            let image_path = "./src/static/chimp.png"; // Placeholder path
-                                                       // i
+            let image_path = "./static/chimp.png"; // Placeholder path
+                                                   // i
             match fs::read(image_path) {
                 Ok(image_data) => {
                     let encoded_image = general_purpose::STANDARD.encode(image_data);
